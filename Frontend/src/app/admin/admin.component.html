@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<div class="container">
+    
+    <div class="box">
+    
+        <form class="mb-5 shadow" #form="ngForm" (ngSubmit)="form.valid&&login()">
+            <div class="text-center">
+               
+                <h3 class="pt-1 " style="color: rgb(14, 127, 219);"><strong>Login</strong></h3>
+            </div>
+            <div class="mb-3 mt-5">
+                <label  class="form-label">Email address</label>
+                <input type="email" class="form-control" required  name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  >
+                <small class="text-danger" >*Enter your Email address</small>
+                <small class="text-danger">*Enter valid email address</small>      
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" required  name="password" >
+                <small class="text-danger">*Enter your Password</small>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Role</label>
+                <select class="form-select" aria-label="Default select example" required #role="" name="role" >
+                    <option value="Professor">Professor</option>
+                    <option value="Student">Student</option>
+                  </select>
+                <small class="text-danger" *ngIf="form.submitted">*Role required</small>
+              </div>
+             
+          
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="submit">Login</button>
+              </div>
+              <div class="text-center mt-4">
+                <p>Not a member? <a routerLink="/signup">Register</a></p>
+              </div>
+          </form>
+       
+    </div>

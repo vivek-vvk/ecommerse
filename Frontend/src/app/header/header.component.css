@@ -1,0 +1,19 @@
+nav{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.nav-item a{
+    border-radius: 20px;
+    background-color: orange;
+    color: white;
+}
+.nav-item a:hover{
+    background-color: white;
+    color: black;
+}
+
+.navbar-brand img{
+height: 50px;
+border-radius: 20px;
+}
+

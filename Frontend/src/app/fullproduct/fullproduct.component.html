@@ -1,0 +1,26 @@
+
+
+<div class="coursehome">
+    <h3 class="text-center pt-5 heading22">ALL Products:</h3>
+    
+    <div class="container mt-5 p-3">
+       
+     <div class="row justify-content-around" id="courses">
+        <div class="col-6 col-md-4 col-lg-3 mb-5" style="width: 18rem;" *ngFor="let i of medicine "   >
+            <img src="{{i.image}}" class="card-img-top" alt="..." style="border-color: green;border: 2px solid;height: 200px;" >
+            <div class="card-body">
+              <h3 class="card-text" style="color:blue;font-style: italic;"  >{{i.name}}</h3>
+            </div>
+            <br>
+           
+            <p  style="color: red;font-weight: 40px;">MRP :{{i.amount}}rs</p>
+            
+            <a  *ngIf="_auth.userloggedIn(); else elseBlock" (click)="btn(i)" class="btn btn-primary">More Details </a>
+            <ng-template #elseBlock   style="color: red;">(For purchasing kindly login.)</ng-template>
+         </div>
+
+
+
+        </div>
+    </div>
+</div>
