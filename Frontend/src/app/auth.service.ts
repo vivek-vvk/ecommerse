@@ -8,11 +8,11 @@ export class AuthService {
   constructor() { }
 
 userloggedIn(){
-    return !!localStorage.getItem('token')
+    return !!sessionStorage.getItem('token')
   }
   
   getToken(){
-    return localStorage.getItem("token")
+    return sessionStorage.getItem("token")
   }
  
 }

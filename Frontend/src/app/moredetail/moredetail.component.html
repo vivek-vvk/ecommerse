@@ -4,18 +4,24 @@
 
 <div  id="courses">
     <div class="col-6 col-md-4 col-lg-3 mb-5" style="width: 18rem;"   >
-        <img src="{{medicine.image}} " class="card-img-top" alt="..." style="border-color: green;border: 2px solid;height: 200px;" >
-        <div class="card-body">
-       
-        </div>
+        <img src="{{medicine.image}} " class="card-img-top" alt="..." style="border-color: green;border: 2px solid;height: 300px;" >
+       <h3>{{medicine.name}}</h3>
+        
         <br>
        
         <p  style="color: red;font-weight: 40px;">MRP :{{medicine.amount}}rs</p>
-        
+        <p>Please note:{{medicine.information}}</p>
         
      </div>
 
 
+     <div class="ting">
+        <button (click)="increment()">+</button>
+        <span>{{ counter }}</span>
+        <button (click)="decrement()">-</button>
+      </div>
+
 
     </div>
 
+    

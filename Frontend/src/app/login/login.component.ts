@@ -25,9 +25,9 @@ user={
     this.userService.login(this.user).subscribe((res)=>{
 
       if(res.status){
-        localStorage.setItem('token' , res.token)
-        localStorage.setItem('email' , res.email)
-        localStorage.setItem('username' , res.username)
+        sessionStorage.setItem('token' , res.token)
+        sessionStorage.setItem('email' , res.email)
+       sessionStorage.setItem('username' , res.username)
         Swal.fire(' logged inn!!');  
         this.router.navigate(['/'])
 

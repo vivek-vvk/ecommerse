@@ -15,8 +15,17 @@ export class MoredetailComponent implements OnInit {
       image:"",
       information:""
     }
-  
 
+    
+    counter = 0;
+    step = 1;
+    increment() {
+      this.counter += this.step;
+    }
+    
+    decrement() {
+      this.counter -= this.step;
+    }
 
   constructor(private medicineService:MedicineService) { }
 
@@ -28,7 +37,6 @@ export class MoredetailComponent implements OnInit {
   })
   }
 
-
-
+  
 
 }
